@@ -6,7 +6,7 @@
 	<version>2.0.0</version>
 	<packaging>maven-archetype</packaging> 
 	<name>dpu template</name>
-	<description>Template for DPU - utilizes libraries from https://github.com/mff-uk/DPUs.</description>
+	<description>Template for data processing unit (DPU).</description>
 	
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
