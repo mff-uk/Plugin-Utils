@@ -56,12 +56,21 @@ public class ConfigHistory<CONFIG> {
         // Search for mathicng class in history.
         do {
             object = deserialize(configAsString, current.configClass, serializers);
-            if (object != null) {
-                break;
+            if (object == null) {
+                // We should try alternatives here. As alternative can be converted
+                // to this class and this call to another, we can use alternative as value for object directly.
+                for (Class<VersionedConfig<?>> alternativceClass : current.alternatives) {
+                    object = deserialize(configAsString, alternativceClass, serializers);
+                    if (object != null) {
+                        // We have it, we can stop search.
+                        break ;
+                    }
+                }
             }
-            // Go to the next history record.
+            // Go to the next history record. It doesnt matter if we move to next record event when
+            // object != null, as we do not use current any further.
             current = current.previous;
-        } while (current != null);
+        } while (current != null || object != null);
         // Check that we have something.
         if (object == null) {
             throw new ConfigException("Can't parse given object, no history record has been found.");
