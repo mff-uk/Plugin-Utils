@@ -165,36 +165,33 @@ public class ContextUtils {
     }
 
     /**
-     * Throw DPU exception of given text. Before throw given text is localized based on current locale
+     * Return DPU exception of given text. Before throw given text is localized based on current locale
      * setting.
      *
      * @param message Exception message.
-     * @throws DPUException
      */
-    public void throwDpuException(UserContext context, String message) throws DPUException {
-        throw new DPUException(context.tr(message));
+    public static DPUException dpuException(UserContext context, String message) {
+        return new DPUException(context.tr(message));
     }
 
     /**
-     * Throw DPU exception of given text. Before throw given text is localized based on current locale
+     * Return DPU exception of given text. Before throw given text is localized based on current locale
      * setting.
      *
      * @param message
      * @param args
-     * @throws DPUException
      */
-    public void throwDpuException(UserContext context, String message, Object... args) throws DPUException {
-        throw new DPUException(context.tr(message, args));
+    public static  DPUException dpuException(UserContext context, String message, Object... args) {
+        return new DPUException(context.tr(message, args));
     }
 
     /**
-     * Throws exception that informs that current execution has been cancelled.
+     * Return DPU exception that informs that current execution has been cancelled.
      *
      * @param context
-     * @throws DPUException
      */
-    public void throwCancelled(UserContext context) throws DPUException {
-        throw new DPUException(context.tr("lib.boost.execution.cancelled"));
+    public static DPUException dpuExceptionCancelled(UserContext context) {
+        return new DPUException(context.tr("lib.boost.execution.cancelled"));
     }
 
 }
