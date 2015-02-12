@@ -116,12 +116,8 @@ public abstract class AbstractDpu<CONFIG> implements DPU, DPUConfigurable,
             }
         } catch (DPUException ex) {
             exception = ex;
-        } catch (DataUnitException ex) {
-            exception = new DPUException("DPU.innerExecute fail for problem with data unit.", ex);
         } catch (RuntimeException ex) {
             exception = new DPUException("DPU.innerExecute throws runtime exception.", ex);
-        } catch (Exception ex) {
-            exception = new DPUException("DPU.innerExecute throws general exception.", ex);
         } catch (Throwable ex) {
             exception = new DPUException("DPU.innerExecute throws throwable.", ex);
         }
@@ -248,9 +244,8 @@ public abstract class AbstractDpu<CONFIG> implements DPU, DPUConfigurable,
      * Execute user DPU code.
      *
      * @throws DPUException
-     * @throws eu.unifiedviews.dataunit.DataUnitException
      */
-    protected abstract void innerExecute() throws DPUException, DataUnitException;
+    protected abstract void innerExecute() throws DPUException;
 
     /**
      * Is called after the {@link #innerExecute()} ends.
