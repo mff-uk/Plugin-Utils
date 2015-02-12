@@ -4,7 +4,6 @@ import com.vaadin.ui.CheckBox;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import cz.cuni.mff.xrg.uv.boost.dpu.addon.AddonException;
-import cz.cuni.mff.xrg.uv.boost.dpu.addon.CancelledException;
 import cz.cuni.mff.xrg.uv.boost.dpu.config.ConfigException;
 import cz.cuni.mff.xrg.uv.boost.dpu.vaadin.AbstractAddonDialog;
 import cz.cuni.mff.xrg.uv.boost.dpu.vaadin.Configurable;
@@ -415,7 +414,7 @@ public class CachedFileDownloader
      * @throws AddonException Is thrown in case of wrong URL format.
      * @throws IOException
      */
-    public File get(String fileUrl) throws AddonException, IOException {
+    public File get(String fileUrl) throws AddonException, IOException, DPUException {
         try {
             return get(new URL(fileUrl));
         } catch (MalformedURLException e) {
@@ -431,7 +430,7 @@ public class CachedFileDownloader
      * @throws AddonException Is thrown in case of wrong URL format.
      * @throws IOException
      */
-    public File get(URL fileUrl) throws AddonException, IOException {
+    public File get(URL fileUrl) throws AddonException, IOException, DPUException {
         return get(fileUrl.toString(), fileUrl);
     }
 
@@ -445,7 +444,7 @@ public class CachedFileDownloader
      * @throws AddonException
      * @throws IOException
      */
-    public File get(String fileName, URL fileUrl) throws AddonException, IOException {
+    public File get(String fileName, URL fileUrl) throws AddonException, IOException, DPUException {
         if (baseDirectory == null) {
             throw new AddonException("Not initialized!");
         }
@@ -496,7 +495,7 @@ public class CachedFileDownloader
         // If we are here we does not manage to download file. So check for the reason.
         if (dpuContext.canceled()) {
             // Execution has been canceled.
-            throw new CancelledException();
+            throw ContextUtils.dpuExceptionCancelled(context.asUserContext());
         } else {
             // We were unable to download file in given number of attemps, we have faild.
             throw new IOException("Can't obtain file: '" + fileUrl.toString() + "' named: '" + fileName + "'");
@@ -508,7 +507,7 @@ public class CachedFileDownloader
      *
      * @param uris
      */
-    public void get(List<URL> urls) throws AddonException, IOException {
+    public void get(List<URL> urls) throws AddonException, IOException, DPUException {
         for (URL url : urls) {
             get(url);
         }
