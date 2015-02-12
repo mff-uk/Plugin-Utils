@@ -2,21 +2,30 @@ package cz.cuni.mff.xrg.uv.boost.dpu.context;
 
 import java.text.MessageFormat;
 import java.util.Locale;
-import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
  *
- * @author eea
+ * @author Škoda Petr
  */
 public class Localization {
 
-    private final String BUNDLE_NAME = "resources";
+    /**
+     * File name for DPU's localization.
+     */
+    private final String BUNDLE_NAME_DPU = "resources";
+
+    /**
+     * File name for library localization.
+     */
+    private final String BUNDLE_NAME_LIB = "resources_lib";
 
     /**
      * Used resource bundle.
      */
-    private ResourceBundle resourceBundle = null;
+    private ResourceBundle resourceBundleDpu = null;
+
+    private ResourceBundle resourceBundleLib = null;
 
     /**
      * Set current locale.
@@ -24,7 +33,9 @@ public class Localization {
      * @param locale
      */
     public void setLocale(Locale locale, ClassLoader classLoader) {
-        resourceBundle = ResourceBundle.getBundle(BUNDLE_NAME, locale, classLoader);
+        resourceBundleDpu = ResourceBundle.getBundle(BUNDLE_NAME_DPU, locale, classLoader);
+        resourceBundleLib = ResourceBundle.getBundle(BUNDLE_NAME_LIB, locale,
+                Localization.class.getClassLoader());
     }
 
     /**
@@ -35,12 +46,15 @@ public class Localization {
      * @return formatted string, returns "!key!" when the value is not found in bundle
      */
     public String getString(final String key, final Object... args) {
-        if (resourceBundle == null) {
+        if (resourceBundleDpu == null || resourceBundleLib == null) {
             throw new RuntimeException("Localization module has not been initialized!");
         }
-        try {
-            return MessageFormat.format(resourceBundle.getString(key), args);
-        } catch (MissingResourceException e) {
+
+        if (resourceBundleDpu.containsKey(key)) {
+            return MessageFormat.format(resourceBundleDpu.getString(key), args);
+        } else if (resourceBundleLib.containsKey(key)) {
+            return MessageFormat.format(resourceBundleLib.getString(key), args);
+        } else {
             // Fallback for missing values.
             return '!' + key + '!';
         }

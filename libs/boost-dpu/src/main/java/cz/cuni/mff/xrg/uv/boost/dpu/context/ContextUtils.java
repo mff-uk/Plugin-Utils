@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.cuni.mff.xrg.uv.boost.dpu.advanced.ExecContext;
-import cz.cuni.mff.xrg.uv.boost.dpu.advanced.UserExecContext;
 import eu.unifiedviews.dpu.DPUContext;
 import eu.unifiedviews.dpu.DPUException;
 
@@ -22,7 +21,7 @@ public class ContextUtils {
     }
 
     /**
-     * Send given formated message. Does not support message with exception.
+     * Translate and send given formated message.
      *
      * @param context    If null only log about message is stored.
      * @param type
@@ -32,9 +31,9 @@ public class ContextUtils {
      */
     public static void sendMessage(UserContext context, DPUContext.MessageType type, String caption,
             String bodyFormat, Object... args) {
-        final String body = String.format(bodyFormat, args);
+        final String body = context.tr(bodyFormat, args);
         if (context.getMasterContext() instanceof ExecContext) {
-            final DPUContext dpuContext = ((ExecContext)context.getMasterContext()).getDpuContext();
+            final DPUContext dpuContext = ((ExecContext) context.getMasterContext()).getDpuContext();
             if (dpuContext != null) {
                 dpuContext.sendMessage(type, caption, body);
                 return;
@@ -45,7 +44,7 @@ public class ContextUtils {
     }
 
     /**
-     * Send given formated message. Does not support message with exception.
+     * Translate and send given formated message. Does not support message with exception.
      *
      * @param context    If null only log about message is stored.
      * @param type
@@ -56,9 +55,9 @@ public class ContextUtils {
      */
     public static void sendMessage(UserContext context, DPUContext.MessageType type, String caption,
             Exception exception, String bodyFormat, Object... args) {
-        final String body = String.format(bodyFormat, args);
+        final String body = context.tr(bodyFormat, args);
         if (context.getMasterContext() instanceof ExecContext) {
-            final DPUContext dpuContext = ((ExecContext)context.getMasterContext()).getDpuContext();
+            final DPUContext dpuContext = ((ExecContext) context.getMasterContext()).getDpuContext();
             if (dpuContext != null) {
                 dpuContext.sendMessage(type, caption, body, exception);
                 return;
@@ -69,7 +68,8 @@ public class ContextUtils {
     }
 
     /**
-     * Send formated {@link DPUContext.MessageType#INFO} message.
+     * Send formated {@link DPUContext.MessageType#INFO} message. Localization is applied before the
+     * message is send.
      *
      * @param context
      * @param caption    Caption ie. short message.
@@ -81,7 +81,8 @@ public class ContextUtils {
     }
 
     /**
-     * Send formated {@link DPUContext.MessageType#WARNING} message.
+     * Send formated {@link DPUContext.MessageType#WARNING} message. Localization is applied before the
+     * message is send.
      *
      * @param context
      * @param caption    Caption ie. short message.
@@ -93,7 +94,8 @@ public class ContextUtils {
     }
 
     /**
-     * Send formated {@link DPUContext.MessageType#WARNING} message.
+     * Send formated {@link DPUContext.MessageType#WARNING} message. Localization is applied before the
+     * message is send.
      *
      * @param context
      * @param caption
@@ -107,7 +109,8 @@ public class ContextUtils {
     }
 
     /**
-     * Send formated {@link DPUContext.MessageType#ERROR} message.
+     * Send formated {@link DPUContext.MessageType#ERROR} message. Localization is applied before the
+     * message is send.
      *
      * @param context
      * @param caption
@@ -121,7 +124,8 @@ public class ContextUtils {
     }
 
     /**
-     * Send formated {@link DPUContext.MessageType#ERROR} message.
+     * Send formated {@link DPUContext.MessageType#ERROR} message. Localization is applied before the
+     * message is send.
      *
      * @param context
      * @param caption
@@ -136,6 +140,7 @@ public class ContextUtils {
 
     /**
      * Send short {@link DPUContext.MessageType#INFO message (caption only). The caption is formated.
+     * Localization is applied before the message is send.
      *
      * @param context
      * @param captionFormat
@@ -148,6 +153,7 @@ public class ContextUtils {
 
     /**
      * Send short {@link DPUContext.MessageType#WARNING} message (caption only). The caption is formated.
+     * Localization is applied before the message is send.
      *
      * @param context
      * @param captionFormat
@@ -165,20 +171,30 @@ public class ContextUtils {
      * @param message Exception message.
      * @throws DPUException
      */
-    public void throwDpuException(String message) throws DPUException {
-
+    public void throwDpuException(UserContext context, String message) throws DPUException {
+        throw new DPUException(context.tr(message));
     }
 
     /**
      * Throw DPU exception of given text. Before throw given text is localized based on current locale
      * setting.
-     * 
+     *
      * @param message
      * @param args
      * @throws DPUException
      */
-    public void throwDpuException(String message, Object... args) throws DPUException {
+    public void throwDpuException(UserContext context, String message, Object... args) throws DPUException {
+        throw new DPUException(context.tr(message, args));
+    }
 
+    /**
+     * Throws exception that informs that current execution has been cancelled.
+     *
+     * @param context
+     * @throws DPUException
+     */
+    public void throwCancelled(UserContext context) throws DPUException {
+        throw new DPUException(context.tr("lib.boost.execution.cancelled"));
     }
 
 }
