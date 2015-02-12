@@ -24,19 +24,12 @@ public class ConfigHistoryEntry<SOURCE, DEST> {
     final Class<SOURCE> configClass;
 
     /**
-     * User given class alias.
-     * Null if no alias was given.
-     */
-    final String alias;
-
-    /**
      * Pointer to previous entry in configuration history.
      */
     final ConfigHistoryEntry<?, SOURCE> previous;
 
-    ConfigHistoryEntry(Class<SOURCE> configClass, String alias, ConfigHistoryEntry<?, SOURCE> previous) {
+    ConfigHistoryEntry(Class<SOURCE> configClass, ConfigHistoryEntry<?, SOURCE> previous) {
         this.configClass = configClass;
-        this.alias = alias;
         this.previous = previous;
     }
 
@@ -49,7 +42,7 @@ public class ConfigHistoryEntry<SOURCE, DEST> {
      */
     public <TARGET, DEST extends VersionedConfig<TARGET>> ConfigHistoryEntry<DEST, TARGET> add(
             Class<DEST> clazz) {
-        return new ConfigHistoryEntry<>(clazz, null, (ConfigHistoryEntry<?, DEST>) this);
+        return new ConfigHistoryEntry<>(clazz, (ConfigHistoryEntry<?, DEST>) this);
     }
 
     /**

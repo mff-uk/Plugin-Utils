@@ -96,21 +96,7 @@ public class ConfigHistory<CONFIG> {
      * @return
      */
     public static <T, S extends VersionedConfig<T>> ConfigHistoryEntry<S, T> history(Class<S> clazz) {
-        return new ConfigHistoryEntry<>(clazz, null, null);
-    }
-
-    /**
-     * Call {@link #create(java.lang.Class, java.lang.String)} with alias equals to given class name.
-     *
-     * @param <T>
-     * @param <S>
-     * @param clazz
-     * @param alias
-     * @return
-     */
-    public static <T, S extends VersionedConfig<T>> ConfigHistoryEntry<S, T> history(Class<S> clazz,
-            String alias) {
-        return new ConfigHistoryEntry<>(clazz, alias, null);
+        return new ConfigHistoryEntry<>(clazz, null);
     }
 
     /**
