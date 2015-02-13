@@ -16,12 +16,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cz.cuni.mff.xrg.uv.boost.dpu.advanced.UserExecContext;
-import cz.cuni.mff.xrg.uv.utils.dataunit.rdf.RdfDataUnitUtils;
+import eu.unifiedviews.helpers.dataunit.rdf.RdfDataUnitUtils;
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.rdf.RDFDataUnit;
 import eu.unifiedviews.dpu.DPUException;
 
-import static cz.cuni.mff.xrg.uv.utils.dataunit.metadata.MetadataUtilsInstance.ENV_PROP_VIRTUOSO;
+import static eu.unifiedviews.helpers.dataunit.metadata.MetadataUtilsInstance.ENV_PROP_VIRTUOSO;
 
 /**
  * Utilities for SPARQL execution.

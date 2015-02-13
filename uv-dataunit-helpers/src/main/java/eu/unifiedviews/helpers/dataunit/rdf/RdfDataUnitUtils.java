@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.utils.dataunit.rdf;
+package eu.unifiedviews.helpers.dataunit.rdf;
 
 import java.util.ArrayList;
 import java.util.List;

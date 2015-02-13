@@ -3,8 +3,8 @@ package cz.cuni.mff.xrg.uv.boost.extensions;
 import java.io.File;
 import java.util.List;
 
-import cz.cuni.mff.xrg.uv.utils.dataunit.DataUnitUtils;
-import cz.cuni.mff.xrg.uv.utils.dataunit.files.FilesDataUnitUtils;
+import eu.unifiedviews.helpers.dataunit.DataUnitUtils;
+import eu.unifiedviews.helpers.dataunit.files.FilesDataUnitUtils;
 import eu.unifiedviews.dataunit.MetadataDataUnit;
 import eu.unifiedviews.dataunit.files.FilesDataUnit;
 import eu.unifiedviews.dpu.DPUException;

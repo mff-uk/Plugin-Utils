@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.utils.dataunit.metadata;
+package eu.unifiedviews.helpers.dataunit.metadata;
 
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.MetadataDataUnit;

@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.utils.dataunit.metadata;
+package eu.unifiedviews.helpers.dataunit.metadata;
 
 import org.openrdf.model.URI;
 import org.openrdf.model.ValueFactory;

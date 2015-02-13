@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.utils.dataunit;
+package eu.unifiedviews.helpers.dataunit;
 
 import java.util.Date;
 import java.util.LinkedList;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.openrdf.model.URI;
 
-import cz.cuni.mff.xrg.uv.utils.dataunit.rdf.RdfDataUnitUtils;
+import eu.unifiedviews.helpers.dataunit.rdf.RdfDataUnitUtils;
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.MetadataDataUnit;
 import eu.unifiedviews.dataunit.WritableMetadataDataUnit;

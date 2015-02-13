@@ -1,8 +1,8 @@
-package cz.cuni.mff.xrg.uv.utils.dataunit.files;
+package eu.unifiedviews.helpers.dataunit.files;
 
 import java.io.File;
 
-import cz.cuni.mff.xrg.uv.utils.dataunit.metadata.MetadataUtils;
+import eu.unifiedviews.helpers.dataunit.metadata.MetadataUtils;
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.files.FilesDataUnit;
 import eu.unifiedviews.dataunit.files.WritableFilesDataUnit;

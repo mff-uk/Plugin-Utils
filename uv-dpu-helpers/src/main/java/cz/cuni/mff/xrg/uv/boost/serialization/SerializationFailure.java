@@ -1,13 +1,13 @@
 package cz.cuni.mff.xrg.uv.boost.serialization;
 
-import cz.cuni.mff.xrg.uv.utils.dataunit.FailedOperationException;
+import eu.unifiedviews.helpers.dataunit.HelperFailedException;
 
 /**
  * Base exception used by serialization module.
  * 
  * @author Škoda Petr
  */
-public class SerializationFailure extends FailedOperationException {
+public class SerializationFailure extends HelperFailedException {
 
     public SerializationFailure(String message) {
         super(message);

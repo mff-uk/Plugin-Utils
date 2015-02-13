@@ -1,12 +1,12 @@
 package cz.cuni.mff.xrg.uv.boost.rdf.sparql;
 
-import cz.cuni.mff.xrg.uv.utils.dataunit.FailedOperationException;
+import eu.unifiedviews.helpers.dataunit.HelperFailedException;
 
 /**
  *
  * @author Škoda Petr
  */
-public class SparqlProblemException extends FailedOperationException {
+public class SparqlProblemException extends HelperFailedException {
 
     public SparqlProblemException(String message) {
         super(message);
