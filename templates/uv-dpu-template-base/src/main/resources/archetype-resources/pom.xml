@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cz.cuni.mff.xrg.uv</groupId>
-        <artifactId>unifiedviews-dpu-base</artifactId>
+        <artifactId>uv-pom-dpu</artifactId>
         <version>${parent_version}</version>
     </parent>
     <groupId>${groupId}</groupId>

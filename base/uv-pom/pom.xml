@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>cz.cuni.mff.xrg.uv</groupId>
-    <artifactId>uv-pom-base</artifactId>
+    <artifactId>uv-pom</artifactId>
     <version>2.0.0</version>
     <packaging>pom</packaging>
-    <name>uv-pom-base</name>
+    <name>uv-pom</name>
 
     <developers>
         <developer>

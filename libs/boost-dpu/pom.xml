@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>cz.cuni.mff.xrg.uv</groupId>
-        <artifactId>unifiedviews-dpu-base</artifactId>
+        <artifactId>uv-pom-lib</artifactId>
         <version>2.0.0</version>
     </parent>
     <groupId>cz.cuni.mff.xrg.uv</groupId>
@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>utils-dataunit</artifactId>
+            <artifactId>uv-dataunit-helpers</artifactId>
             <version>[${uk.version.min},${uk.version.max})</version>
             <scope>provided</scope>
         </dependency>
@@ -24,6 +24,20 @@
         <dependency>
             <groupId>eu.unifiedviews</groupId>
             <artifactId>uv-dataunit-rdf</artifactId>
+            <version>[${unifiedviews.version},${unifiedviews.version.max})</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>eu.unifiedviews</groupId>
+            <artifactId>uv-dataunit-files</artifactId>
+            <version>[${unifiedviews.version},${unifiedviews.version.max})</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>eu.unifiedviews</groupId>
+            <artifactId>uv-dpu-api-helpers</artifactId>
             <version>[${unifiedviews.version},${unifiedviews.version.max})</version>
             <type>jar</type>
             <scope>provided</scope>
@@ -56,7 +70,7 @@
         </dependency>
         <dependency>
             <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>utils-test</artifactId>
+            <artifactId>uv-dpu-test-helpers</artifactId>
             <version>[${uk.version.min},${uk.version.max})</version>
             <scope>test</scope>
         </dependency>
