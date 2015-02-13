@@ -17,6 +17,14 @@
         </developer>
     </developers>
 
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License, Version 3</name>
+			<url>https://www.gnu.org/licenses/lgpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
     <properties>
         <!-- Min. uv version - version of libs. during development. -->
         <unifiedviews.version>1.1.0</unifiedviews.version>
