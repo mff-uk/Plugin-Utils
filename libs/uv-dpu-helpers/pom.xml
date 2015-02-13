@@ -8,10 +8,10 @@
         <version>2.0.0</version>
     </parent>
     <groupId>cz.cuni.mff.xrg.uv</groupId>
-    <artifactId>boost-dpu</artifactId>
+    <artifactId>uv-dpu-helpers</artifactId>
     <version>2.0.0</version>
     <packaging>bundle</packaging>
-    <name>boost dpu</name>
+    <name>uv-dpu-helpers</name>
 
     <dependencies>
         <dependency>
