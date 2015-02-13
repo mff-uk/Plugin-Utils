@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>eu.unifiedviews</groupId>
+	<artifactId>uv-plugin-devenv</artifactId>
+	<version>1.3.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+    <description>Base build all project. Used instead of build script.</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<modules>
+        <!-- API of Unifiedviews. -->
+        <module>uv-dpu-api</module>
+        <module>uv-dataunit-files</module>        
+        <module>uv-dataunit-rdf</module>
+        <module>uv-dpu-api-helpers</module>
+        <!-- Base pom.xml projects. -->
+        <module>uv-pom</module>
+        <module>uv-pom-dpu</module>
+        <module>uv-pom-lib</module>
+        <!-- Dataunits based helpers. -->
+        <module>uv-dataunit-helpers</module>
+        <!-- And the rest. -->
+        <module>uv-dpu-helpers</module>
+        <module>uv-dpu-template-base</module>
+        <module>uv-dpu-test-helpers</module>
+	</modules>
+
+</project>
