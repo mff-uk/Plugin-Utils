@@ -7,10 +7,10 @@
         <version>2.0.0</version>
     </parent>    
     <groupId>cz.cuni.mff.xrg.uv</groupId>
-    <artifactId>utils-test</artifactId>
+    <artifactId>uv-dpu-test-helpers</artifactId>
     <version>2.0.0</version>
     <packaging>jar</packaging>
-    <name>utils test</name>
+    <name>uv-dpu-test-helpers</name>
     <description>Project with utilities for DPU testing.</description>
 
     <dependencies>
