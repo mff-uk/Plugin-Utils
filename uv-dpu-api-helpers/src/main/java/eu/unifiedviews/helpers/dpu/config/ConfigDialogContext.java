@@ -5,7 +5,9 @@ import java.util.Locale;
 /**
  * Context for {@link AbstractConfigDialog}.
  *
- * @author Petyr
+ * This class is part of UniviedViews API.
+ *
+ * @author Petr Škoda
  */
 public interface ConfigDialogContext {
 

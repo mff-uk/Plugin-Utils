@@ -8,7 +8,7 @@ import eu.unifiedviews.dpu.config.DPUConfigurable;
  * Convenience base class for configurable DPUs. Every DPU may either extend
  * this class or directly implement {@link DPUConfigurable} interface.
  * 
- * @author Petyr
+ * @author Petr Škoda
  * @author Tomas Knap
  * @param <C>
  */

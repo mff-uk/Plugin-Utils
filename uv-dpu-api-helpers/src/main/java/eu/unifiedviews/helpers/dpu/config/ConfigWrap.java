@@ -28,7 +28,7 @@ import eu.unifiedviews.dpu.config.DPUConfigException;
  * Class provides functionality to serialize, deserialize and create instance config which is serialized as XML, using
  * XStream.
  *
- * @author Petyr
+ * @author Petr Škoda
  * @param <C>
  */
 public class ConfigWrap<C> {

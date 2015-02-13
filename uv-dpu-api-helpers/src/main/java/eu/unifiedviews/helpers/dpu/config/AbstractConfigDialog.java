@@ -7,6 +7,8 @@ import eu.unifiedviews.dpu.config.DPUConfigException;
 /**
  * Base abstract class for a configuration dialog.
  *
+ * This class is part of UniviedViews API.
+ *
  * @param <C>
  */
 public abstract class AbstractConfigDialog<C>
