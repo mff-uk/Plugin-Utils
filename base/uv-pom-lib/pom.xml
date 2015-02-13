@@ -8,10 +8,10 @@
         <version>2.0.0</version>
     </parent>
     <groupId>cz.cuni.mff.xrg.uv</groupId>
-    <artifactId>unifiedviews-lib-base</artifactId>
+    <artifactId>uv-pom-lib</artifactId>
     <version>2.0.0</version>
     <packaging>pom</packaging>
-    <name>unifiedviews lib base</name>
+    <name>uv-pom-lib</name>
     <description>Base project for libraries.</description>
 
     <properties>
