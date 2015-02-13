@@ -1,5 +1,6 @@
 package cz.cuni.mff.xrg.uv.boost.dpu.config.serializer;
 
+import cz.cuni.mff.xrg.uv.boost.dpu.config.ConfigSerializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

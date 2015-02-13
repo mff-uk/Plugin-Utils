@@ -6,7 +6,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.cuni.mff.xrg.uv.boost.dpu.config.serializer.ConfigSerializer;
 import cz.cuni.mff.xrg.uv.boost.dpu.config.serializer.XStreamSerializer;
 import cz.cuni.mff.xrg.uv.boost.dpu.config.transformer.AddonMigration;
 import cz.cuni.mff.xrg.uv.boost.serialization.xml.SerializationXml;

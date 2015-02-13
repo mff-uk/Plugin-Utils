@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.boost.dpu.config.serializer;
+package cz.cuni.mff.xrg.uv.boost.dpu.config;
 
 /**
  *

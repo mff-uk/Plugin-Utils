@@ -4,7 +4,6 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.cuni.mff.xrg.uv.boost.dpu.config.serializer.ConfigSerializer;
 
 /**
  *
@@ -70,7 +69,7 @@ public class ConfigHistory<CONFIG> {
             // Go to the next history record. It doesnt matter if we move to next record event when
             // object != null, as we do not use current any further.
             current = current.previous;
-        } while (current != null || object != null);
+        } while (current != null && object == null);
         // Check that we have something.
         if (object == null) {
             throw new ConfigException("Can't parse given object, no history record has been found.");
