@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
  *
  * Known limitations:
  * <ul>
- * <li>Does not support metadata!</li>
+ * <li>Does not support metadata.</li>
  * </ul>
  *
  * Don't forget to call {@link #shutDown()} at the end to release resources.

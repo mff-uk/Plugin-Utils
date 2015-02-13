@@ -4,7 +4,7 @@ import eu.unifiedviews.dataunit.rdf.WritableRDFDataUnit;
 import org.openrdf.repository.RepositoryException;
 
 /**
- * Factory for test RDF data units with limited functionality.
+ * Factory for test RDF data units.
  *
  * @author Škoda Petr
  */
