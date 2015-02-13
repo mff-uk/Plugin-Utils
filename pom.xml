@@ -6,7 +6,7 @@
 	<artifactId>uv-plugin-devenv</artifactId>
 	<version>1.3.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-    <description>Base build all project. Used instead of build script.</description>
+    <description>Base project, used to build all other projects in this repository. Used instead of build script.</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
