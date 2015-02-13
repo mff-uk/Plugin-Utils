@@ -1,6 +1,6 @@
-package cz.cuni.mff.xrg.uv.test.boost.rdf;
+package eu.unifiedviews.helpers.test.rdf;
 
-import cz.cuni.mff.xrg.uv.test.boost.resources.ResourceUtils;
+import eu.unifiedviews.helpers.test.resources.ResourceUtils;
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.rdf.RDFDataUnit;
 import eu.unifiedviews.dataunit.rdf.WritableRDFDataUnit;

@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.test.boost.dpu;
+package eu.unifiedviews.helpers.test.dpu;
 
 import eu.unifiedviews.dpu.DPUContext;
 import java.io.File;

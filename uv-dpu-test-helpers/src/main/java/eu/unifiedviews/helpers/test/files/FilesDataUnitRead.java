@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.test.boost.files;
+package eu.unifiedviews.helpers.test.files;
 
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.files.FilesDataUnit;

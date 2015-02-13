@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.test.boost.files;
+package eu.unifiedviews.helpers.test.files;
 
 /**
  * Factory for test files data units.

@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.test.boost.resources;
+package eu.unifiedviews.helpers.test.resources;
 
 import java.io.File;
 import java.net.URL;

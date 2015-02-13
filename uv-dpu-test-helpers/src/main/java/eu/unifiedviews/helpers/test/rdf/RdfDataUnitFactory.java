@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.test.boost.rdf;
+package eu.unifiedviews.helpers.test.rdf;
 
 import eu.unifiedviews.dataunit.rdf.WritableRDFDataUnit;
 import org.openrdf.repository.RepositoryException;

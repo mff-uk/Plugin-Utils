@@ -4,7 +4,7 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.cuni.mff.xrg.uv.test.boost.dpu.DPUContextMockBase;
+import eu.unifiedviews.helpers.test.dpu.DPUContextMockBase;
 import eu.unifiedviews.dpu.DPUException;
 
 /**

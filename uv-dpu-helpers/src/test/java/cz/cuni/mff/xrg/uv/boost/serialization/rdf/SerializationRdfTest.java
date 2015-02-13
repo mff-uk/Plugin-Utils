@@ -10,8 +10,8 @@ import org.openrdf.model.URI;
 import org.openrdf.model.impl.ValueFactoryImpl;
 
 import cz.cuni.mff.xrg.uv.boost.ontology.EntityDescription;
-import cz.cuni.mff.xrg.uv.test.boost.rdf.RdfDataUnitFactory;
-import cz.cuni.mff.xrg.uv.test.boost.rdf.TripleInserter;
+import eu.unifiedviews.helpers.test.rdf.RdfDataUnitFactory;
+import eu.unifiedviews.helpers.test.rdf.TripleInserter;
 import eu.unifiedviews.dataunit.rdf.RDFDataUnit;
 import eu.unifiedviews.dataunit.rdf.WritableRDFDataUnit;
 import junit.framework.Assert;
