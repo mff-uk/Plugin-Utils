@@ -66,14 +66,6 @@
             <version>1.0.13</version>
             <scope>test</scope>
         </dependency>
-        <!-- Utilis for testing. -->
-        <dependency>
-            <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>utils-test</artifactId>
-            <version>[${uk.version.min},${uk.version.max})</version>
-            <type>jar</type>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
     <build>
         <resources>
