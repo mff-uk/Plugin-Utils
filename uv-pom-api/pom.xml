@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -8,19 +8,14 @@
         <relativePath>../uv-pom/pom.xml</relativePath>
     </parent>
     <groupId>eu.unifiedviews</groupId>
-    <artifactId>uv-pom-lib</artifactId>
+    <artifactId>uv-pom-api</artifactId>
     <version>1.3.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>uv-pom-lib</name>
-    <description>Base project for libraries.</description>
-
-    <properties>
-        <!-- Must end with comma if not empty. -->
-        <osgi.import></osgi.import>
-    </properties>
+    <name>uv-pom-api</name>
+    <description>Commons base project for API libraries.</description>
 
     <dependencies>
-        <!-- Logback as implementation org.slf4j for testing. -->
+        <!-- Logback as implementation org.slf4j, for testing. -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -32,7 +27,7 @@
             <artifactId>logback-core</artifactId>
             <version>${logback.version}</version>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
     </dependencies>
 
     <build>
@@ -43,30 +38,13 @@
                     <include>LICENSE.md</include>
                 </includes>
             </resource>
-        </resources>        
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <version>${bundle.plugin.version}</version>
                 <extensions>true</extensions>
-                <configuration>
-                    <instructions>
-                        <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-Version>${project.version}</Bundle-Version>
-                        <Import-Package>
-                            eu.unifiedviews.*;version="[${unifiedviews.version},${unifiedviews.version.max})",
-                            ${osgi.import}
-                            *
-                        </Import-Package>
-                        <!-- Dependencies embedding. -->
-                        <Embed-Dependency>*;scope=compile|system</Embed-Dependency>
-                        <Embed-Directory>dependency</Embed-Directory>
-                        <Embed-StripGroup>false</Embed-StripGroup>
-                        <Embed-Transitive>false</Embed-Transitive>
-                    </instructions>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -99,7 +77,7 @@
                     </execution>
                 </executions>
             </plugin>
-        </plugins>        
+        </plugins>
     </build>
 
 </project>

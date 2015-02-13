@@ -51,6 +51,7 @@ public class DataUnitUtils {
      * @return List of entries.
      * @throws eu.unifiedviews.dataunit.DataUnitException
      */
+    @SuppressWarnings(value = "unchecked")
     public static <T extends MetadataDataUnit, E extends T.Entry> List<E> getEntries(T dataUnit,
             Class<E> resultClass) throws DataUnitException {
         final List<E> result = new LinkedList<>();
