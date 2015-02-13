@@ -8,10 +8,10 @@
         <version>2.0.0</version>
     </parent>
     <groupId>cz.cuni.mff.xrg.uv</groupId>
-    <artifactId>unifiedviews-dpu-base</artifactId>
+    <artifactId>uv-pom-dpu</artifactId>
     <version>2.0.0</version>
     <packaging>pom</packaging>
-    <name>unifiedviews dpu base</name>
+    <name>uv-pom-dpu</name>
     <description>Commons base project for DPU's.</description>
     
     <properties>
