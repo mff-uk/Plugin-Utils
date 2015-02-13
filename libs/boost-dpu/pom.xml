@@ -54,12 +54,6 @@
             <version>1.10.19</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>utils-test</artifactId>
-            <version>[${uk.version.min},${uk.version.max})</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
     
 </project>
