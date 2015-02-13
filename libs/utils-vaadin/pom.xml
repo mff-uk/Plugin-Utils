@@ -7,10 +7,10 @@
         <artifactId>unifiedviews-lib-base</artifactId>
         <version>2.0.0</version>
     </parent>
-    <artifactId>utils-vaadin</artifactId>
+    <artifactId>utils-dialog</artifactId>
     <version>2.0.0</version>
     <packaging>bundle</packaging>
-    <name>utils vaadin</name>
+    <name>utils dialog</name>
     <description>Utils for general Vaadin dialog.</description>
 
     <dependencies>

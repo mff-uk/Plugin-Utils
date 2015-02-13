@@ -116,6 +116,8 @@ public abstract class AbstractDpu<CONFIG> implements DPU, DPUConfigurable,
             }
         } catch (DPUException ex) {
             exception = ex;
+        } catch (DataUnitException ex) {
+            exception = new DPUException(ex);
         } catch (RuntimeException ex) {
             exception = new DPUException("DPU.innerExecute throws runtime exception.", ex);
         } catch (Throwable ex) {
@@ -245,7 +247,7 @@ public abstract class AbstractDpu<CONFIG> implements DPU, DPUConfigurable,
      *
      * @throws DPUException
      */
-    protected abstract void innerExecute() throws DPUException;
+    protected abstract void innerExecute() throws DPUException, DataUnitException;
 
     /**
      * Is called after the {@link #innerExecute()} ends.
