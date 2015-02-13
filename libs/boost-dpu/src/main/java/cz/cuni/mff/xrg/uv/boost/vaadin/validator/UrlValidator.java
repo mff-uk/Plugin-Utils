@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.utils.dialog.validator;
+package cz.cuni.mff.xrg.uv.boost.vaadin.validator;
 
 import com.vaadin.data.Validator;
 import java.net.MalformedURLException;

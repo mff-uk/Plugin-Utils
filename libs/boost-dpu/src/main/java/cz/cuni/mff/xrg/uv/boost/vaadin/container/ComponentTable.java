@@ -1,4 +1,4 @@
-package cz.cuni.mff.xrg.uv.utils.dialog.container;
+package cz.cuni.mff.xrg.uv.boost.vaadin.container;
 
 import com.vaadin.data.Validator;
 import com.vaadin.ui.*;
