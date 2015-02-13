@@ -17,10 +17,16 @@
     <properties>
         <!-- Libs version. -->
         <vaadin.version>7.3.7</vaadin.version>
+        <module-test.version>1.6.0-SNAPSHOT</module-test.version>
         <!-- Must end with comma if not empty. Can be used to influence the OSGI import package list. -->
         <osgi.packages></osgi.packages>
         <!-- http://jira.codehaus.org/browse/MRESOURCES-99 -->
         <build.timestamp>${maven.build.timestamp}</build.timestamp>
+        <!-- dpu.package and dpu.mainClass must be set to DPU main class package and name respectively. -->
+        <dpu.package></dpu.package>
+        <dpu.mainClass></dpu.mainClass>
+        <!-- Can be used to embeed dependenceis transitively - use with caution. -->
+        <embed.transitive>false</embed.transitive>
     </properties>
     
     <dependencies>
@@ -75,6 +81,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <resources>
             <resource>
@@ -105,6 +112,7 @@
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Bundle-Description>${project.description}</Bundle-Description>
+                        <!-- We add range to some versions. -->
                         <Import-Package>
                             eu.unifiedviews.*;version="[${unifiedviews.version},${unifiedviews.version.max})",
                             com.vaadin.*;version="[${vaadin.version},8.0.0)",
@@ -115,6 +123,7 @@
                         <Embed-Dependency>*;scope=compile|system</Embed-Dependency>
                         <Embed-Directory>dependency</Embed-Directory>
                         <Embed-StripGroup>false</Embed-StripGroup>
+                        <Embed-Transitive>${embed.transitive}</Embed-Transitive>
                         <!-- Unifiedviews properties. -->
                         <DPU-Package>${dpu.package}</DPU-Package>
                         <DPU-MainClass>${dpu.mainClass}</DPU-MainClass>
@@ -124,4 +133,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
