@@ -19,25 +19,25 @@
     </properties>
 
     <dependencies>
-        <!-- Compile library, use compile if UK libs are not as OSGI bundles on target instance.
-            If they are presented then scope can be changed to 'provided'. -->
+        <!-- UnifiedViews API. -->
         <dependency>
-            <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>boost-dpu</artifactId>
-            <version>[${uk.version.min},${uk.version.max})</version>
-            <scope>compile</scope>
+            <groupId>eu.unifiedviews</groupId>
+            <artifactId>uv-dpu-api</artifactId>
+            <version>[${unifiedviews.version},${unifiedviews.version.max})</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- UnifiedViews helpers. -->
+        <dependency>
+            <groupId>eu.unifiedviews</groupId>
+            <artifactId>uv-dataunit-helpers</artifactId>
+            <version>[${unifiedviews.version},${unifiedviews.version.max})</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>utils-dialog</artifactId>
-            <version>[${uk.version.min},${uk.version.max})</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>cz.cuni.mff.xrg.uv</groupId>
-            <artifactId>utils-dataunit</artifactId>
-            <version>[${uk.version.min},${uk.version.max})</version>
-            <scope>compile</scope>
+            <groupId>eu.unifiedviews</groupId>
+            <artifactId>uv-dpu-helpers</artifactId>
+            <version>[${unifiedviews.version},${unifiedviews.version.max})</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 	
