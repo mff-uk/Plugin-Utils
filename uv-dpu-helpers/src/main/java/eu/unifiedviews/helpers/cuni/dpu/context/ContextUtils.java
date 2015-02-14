@@ -3,7 +3,7 @@ package eu.unifiedviews.helpers.cuni.dpu.context;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.unifiedviews.helpers.cuni.dpu.advanced.ExecContext;
+import eu.unifiedviews.helpers.cuni.dpu.exec.ExecContext;
 import eu.unifiedviews.dpu.DPUContext;
 import eu.unifiedviews.dpu.DPUException;
 

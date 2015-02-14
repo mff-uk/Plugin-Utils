@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 
 import eu.unifiedviews.helpers.cuni.dpu.addon.Addon;
 import eu.unifiedviews.helpers.cuni.dpu.addon.AddonException;
-import eu.unifiedviews.helpers.cuni.dpu.advanced.ExecContext;
+import eu.unifiedviews.helpers.cuni.dpu.exec.ExecContext;
 import eu.unifiedviews.helpers.cuni.dpu.context.Context;
 import eu.unifiedviews.helpers.cuni.extensions.FaultTolerance;
 import eu.unifiedviews.helpers.cuni.ontology.EntityDescription;

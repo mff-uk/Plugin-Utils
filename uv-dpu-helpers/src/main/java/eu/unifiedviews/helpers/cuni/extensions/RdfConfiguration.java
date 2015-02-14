@@ -19,8 +19,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.unifiedviews.helpers.cuni.dpu.addon.Addon;
-import eu.unifiedviews.helpers.cuni.dpu.advanced.AbstractDpu;
-import eu.unifiedviews.helpers.cuni.dpu.advanced.ExecContext;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
+import eu.unifiedviews.helpers.cuni.dpu.exec.ExecContext;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigException;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigManager;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigTransformer;

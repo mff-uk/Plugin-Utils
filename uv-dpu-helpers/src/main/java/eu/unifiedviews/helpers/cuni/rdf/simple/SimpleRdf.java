@@ -8,9 +8,9 @@ import org.openrdf.repository.RepositoryException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.unifiedviews.helpers.cuni.dpu.advanced.ExecContext;
+import eu.unifiedviews.helpers.cuni.dpu.exec.ExecContext;
 import eu.unifiedviews.helpers.cuni.dpu.context.Context;
-import eu.unifiedviews.helpers.cuni.dpu.initialization.AutoInitializer;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
 import eu.unifiedviews.helpers.cuni.extensions.FaultTolerance;
 import eu.unifiedviews.dataunit.DataUnitException;
 import eu.unifiedviews.dataunit.rdf.RDFDataUnit;

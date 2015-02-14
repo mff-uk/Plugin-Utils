@@ -1,6 +1,6 @@
 package eu.unifiedviews.helpers.cuni.test;
 
-import eu.unifiedviews.helpers.cuni.dpu.advanced.AbstractDpu;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigException;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigManager;
 import eu.unifiedviews.helpers.cuni.dpu.config.MasterConfigObject;

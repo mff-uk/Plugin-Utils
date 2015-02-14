@@ -8,7 +8,7 @@ import eu.unifiedviews.helpers.cuni.dpu.config.ConfigManager;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigTransformer;
 import eu.unifiedviews.helpers.cuni.dpu.config.MasterConfigObject;
 import eu.unifiedviews.helpers.cuni.dpu.context.Context;
-import eu.unifiedviews.helpers.cuni.dpu.initialization.AutoInitializer;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
 
 /**
  * Provide DPU with possibility of opening configuration from "core" DPUs.

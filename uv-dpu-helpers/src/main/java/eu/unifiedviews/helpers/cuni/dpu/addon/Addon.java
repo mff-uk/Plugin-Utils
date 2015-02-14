@@ -1,6 +1,6 @@
 package eu.unifiedviews.helpers.cuni.dpu.addon;
 
-import eu.unifiedviews.helpers.cuni.dpu.initialization.AutoInitializer;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
 
 /**
  * Base common interface for add-ons. Add-ons can be used to add additional functionality into DPUs.

@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.Locale;
 
 import eu.unifiedviews.helpers.cuni.dpu.addon.Addon;
-import eu.unifiedviews.helpers.cuni.dpu.advanced.AbstractDpu;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigException;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigHistory;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigManager;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigTransformer;
 import eu.unifiedviews.helpers.cuni.dpu.vaadin.Configurable;
-import eu.unifiedviews.helpers.cuni.dpu.initialization.AutoInitializer;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
 import eu.unifiedviews.helpers.cuni.serialization.xml.SerializationXml;
 import eu.unifiedviews.helpers.cuni.serialization.xml.SerializationXmlFactory;
 import eu.unifiedviews.dpu.DPUException;

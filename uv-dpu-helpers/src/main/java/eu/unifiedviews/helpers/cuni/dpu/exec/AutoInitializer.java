@@ -1,4 +1,4 @@
-package eu.unifiedviews.helpers.cuni.dpu.initialization;
+package eu.unifiedviews.helpers.cuni.dpu.exec;
 
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;

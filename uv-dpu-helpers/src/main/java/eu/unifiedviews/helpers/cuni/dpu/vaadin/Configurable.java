@@ -1,7 +1,7 @@
 package eu.unifiedviews.helpers.cuni.dpu.vaadin;
 
 import eu.unifiedviews.helpers.cuni.dpu.addon.Addon;
-import eu.unifiedviews.helpers.cuni.dpu.initialization.AutoInitializer;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
 
 /**
  * Interface for configurable {@link Addon}.

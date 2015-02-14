@@ -4,7 +4,7 @@ import com.vaadin.ui.Component;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.TabSheet.Tab;
 
-import eu.unifiedviews.helpers.cuni.dpu.advanced.AbstractDpu;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
 import eu.unifiedviews.helpers.cuni.dpu.config.MasterConfigObject;
 import eu.unifiedviews.dpu.config.DPUConfigException;
 import eu.unifiedviews.helpers.dpu.config.AbstractConfigDialog;
@@ -17,7 +17,7 @@ import eu.unifiedviews.helpers.cuni.serialization.xml.SerializationXmlFailure;
 import eu.unifiedviews.dpu.DPUException;
 import eu.unifiedviews.helpers.dpu.config.InitializableConfigDialog;
 
-import static eu.unifiedviews.helpers.cuni.dpu.advanced.AbstractDpu.DPU_CONFIG_NAME;
+import static eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu.DPU_CONFIG_NAME;
 
 /**
  * Base class for DPU's configuration dialogs.

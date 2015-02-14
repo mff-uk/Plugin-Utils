@@ -3,7 +3,7 @@ package eu.unifiedviews.helpers.cuni.dpu.vaadin;
 import java.util.LinkedList;
 import java.util.List;
 
-import eu.unifiedviews.helpers.cuni.dpu.advanced.AbstractDpu;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
 import eu.unifiedviews.helpers.cuni.dpu.context.Context;
 import eu.unifiedviews.dpu.DPUException;
 import eu.unifiedviews.helpers.dpu.config.ConfigDialogContext;

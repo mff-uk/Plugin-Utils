@@ -16,7 +16,7 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 
 import eu.unifiedviews.helpers.cuni.dpu.addon.Addon;
-import eu.unifiedviews.helpers.cuni.dpu.advanced.ExecContext;
+import eu.unifiedviews.helpers.cuni.dpu.exec.ExecContext;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigException;
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigHistory;
 import eu.unifiedviews.helpers.cuni.dpu.context.Context;
