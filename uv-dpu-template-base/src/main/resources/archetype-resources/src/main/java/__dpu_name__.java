@@ -8,10 +8,10 @@ import eu.unifiedviews.dpu.DPUException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cz.cuni.mff.xrg.uv.boost.dpu.advanced.AbstractDpu;
-import cz.cuni.mff.xrg.uv.boost.dpu.config.ConfigHistory;
-import cz.cuni.mff.xrg.uv.boost.dpu.initialization.AutoInitializer;
-import cz.cuni.mff.xrg.uv.boost.extensions.FaultTolerance;
+import eu.unifiedviews.helpers.cuni.dpu.config.ConfigHistory;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
+import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
+import eu.unifiedviews.helpers.cuni.extensions.FaultTolerance;
 
 /**
  * Main data processing unit class.

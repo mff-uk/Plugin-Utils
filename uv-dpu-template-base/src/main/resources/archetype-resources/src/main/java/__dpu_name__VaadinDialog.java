@@ -6,8 +6,8 @@ package ${package};
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
 
-import cz.cuni.mff.xrg.uv.boost.dpu.vaadin.AbstractDialog;
 import eu.unifiedviews.dpu.config.DPUConfigException;
+import eu.unifiedviews.helpers.cuni.dpu.vaadin.AbstractDialog;
 
 /**
  * Vaadin configuration dialog for ${dpu_name}.
