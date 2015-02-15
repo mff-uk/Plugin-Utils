@@ -168,6 +168,7 @@ public class ContextUtils {
      * Return DPU exception of given text. Before throw given text is localized based on current locale
      * setting.
      *
+     * @param context
      * @param message Exception message.
      */
     public static DPUException dpuException(UserContext context, String message) {
@@ -178,11 +179,37 @@ public class ContextUtils {
      * Return DPU exception of given text. Before throw given text is localized based on current locale
      * setting.
      *
+     * @param context
+     * @param cause
+     * @param message Exception message.
+     */
+    public static DPUException dpuException(UserContext context, Exception cause, String message) {
+        return new DPUException(context.tr(message), cause);
+    }
+
+    /**
+     * Return DPU exception of given text. Before throw given text is localized based on current locale
+     * setting.
+     *
+     * @param context
      * @param message
      * @param args
      */
     public static  DPUException dpuException(UserContext context, String message, Object... args) {
         return new DPUException(context.tr(message, args));
+    }
+
+    /**
+     * Return DPU exception of given text. Before throw given text is localized based on current locale
+     * setting.
+     *
+     * @param context
+     * @param cause
+     * @param message
+     * @param args
+     */
+    public static  DPUException dpuException(UserContext context, Exception cause, String message, Object... args) {
+        return new DPUException(context.tr(message, args), cause);
     }
 
     /**
