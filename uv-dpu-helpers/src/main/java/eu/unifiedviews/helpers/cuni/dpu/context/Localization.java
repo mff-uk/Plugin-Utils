@@ -55,8 +55,9 @@ public class Localization {
         } else if (resourceBundleLib.containsKey(key)) {
             return MessageFormat.format(resourceBundleLib.getString(key), args);
         } else {
-            // Fallback for missing values.
-            return '!' + key + '!';
+            // Fallback for missing values. We may
+            // add option for debugging values?
+            return key;
         }
     }
 
