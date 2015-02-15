@@ -220,10 +220,18 @@ public class FaultTolerance implements Addon, Configurable<FaultTolerance.Config
 
     private Configuration_V1 config;
 
-    private final ConfigHistory<Configuration_V1> configHistory =
-            ConfigHistory.noHistory(Configuration_V1.class);
+    private final ConfigHistory<Configuration_V1> configHistory
+            = ConfigHistory.noHistory(Configuration_V1.class);
 
+    /**
+     * Context used by DPU, used to find out cancellation.
+     */
     private DPUContext dpuContext;
+
+    /**
+     * Root context.
+     */
+    private Context context;
 
     @Override
     public Class<Configuration_V1> getConfigClass() {
@@ -248,6 +256,7 @@ public class FaultTolerance implements Addon, Configurable<FaultTolerance.Config
 
     @Override
     public void afterInit(Context context) {
+        this.context = context;
         LOG.info("afterInit called!");
         if (context instanceof ExecContext) {
             this.dpuContext = ((ExecContext) context).getDpuContext();
@@ -354,15 +363,17 @@ public class FaultTolerance implements Addon, Configurable<FaultTolerance.Config
     /**
      *
      * @param codeToExecute
-     * @param failMessage Text of exception that should be thrown in case of failure.
+     * @param failMessage   Text of exception that should be thrown in case of failure. Message is localized
+     *                      before use.
+     * @param args
      * @throws DPUException
      */
-    public void execute(Action codeToExecute, String failMessage) throws DPUException {
+    public void execute(Action codeToExecute, String failMessage, Object... args) throws DPUException {
         try {
             execute(codeToExecute);
         } catch (DPUException ex) {
             // Rethrow with custom user message.
-            throw new DPUException(failMessage, ex);
+            throw ContextUtils.dpuException(context.asUserContext(), ex, failMessage, args);
         }
     }
 
@@ -370,16 +381,19 @@ public class FaultTolerance implements Addon, Configurable<FaultTolerance.Config
      *
      * @param <TYPE>
      * @param codeToExecute
-     * @param failMessage Text of exception that should be thrown in case of failure.
+     * @param failMessage   Text of exception that should be thrown in case of failure. Message is localized
+     *                      before use.
+     * @param args
      * @return
      * @throws DPUException
      */
-    public <TYPE> TYPE execute(ActionReturn<TYPE> codeToExecute, String failMessage) throws DPUException {
+    public <TYPE> TYPE execute(ActionReturn<TYPE> codeToExecute, String failMessage, Object... args)
+            throws DPUException {
         try {
             return execute(codeToExecute);
         } catch (DPUException ex) {
             // Rethrow with custom user message.
-            throw new DPUException(failMessage, ex);
+            throw ContextUtils.dpuException(context.asUserContext(), ex, failMessage, args);
         }
     }
 
@@ -388,16 +402,18 @@ public class FaultTolerance implements Addon, Configurable<FaultTolerance.Config
      * @param <T>
      * @param dataUnit
      * @param codeToExecute
-     * @param failMessage Text of exception that should be thrown in case of failure.
+     * @param failMessage   Text of exception that should be thrown in case of failure. Message is localized
+     *                      before use.
+     * @param args
      * @throws DPUException
      */
     public <T extends MetadataDataUnit> void execute(T dataUnit, ConnectionAction codeToExecute,
-            String failMessage) throws DPUException {
+            String failMessage, Object... args) throws DPUException {
         try {
             execute(dataUnit, codeToExecute);
         } catch (DPUException ex) {
             // Rethrow with custom user message.
-            throw new DPUException(failMessage, ex);
+            throw ContextUtils.dpuException(context.asUserContext(), ex, failMessage, args);
         }
     }
 
@@ -423,7 +439,7 @@ public class FaultTolerance implements Addon, Configurable<FaultTolerance.Config
 
     /**
      * Set configuration for test purpose.
-     * 
+     *
      * @param config
      */
     void configure(Configuration_V1 config, DPUContext ctx) {
