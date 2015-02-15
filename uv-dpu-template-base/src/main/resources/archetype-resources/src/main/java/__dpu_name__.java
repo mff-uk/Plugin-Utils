@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.unifiedviews.helpers.cuni.dpu.config.ConfigHistory;
+import eu.unifiedviews.helpers.cuni.dpu.context.ContextUtils;
 import eu.unifiedviews.helpers.cuni.dpu.exec.AbstractDpu;
 import eu.unifiedviews.helpers.cuni.dpu.exec.AutoInitializer;
 import eu.unifiedviews.helpers.cuni.extensions.FaultTolerance;
@@ -32,8 +33,8 @@ public class ${dpu_name} extends AbstractDpu<${dpu_name}Config_V1> {
 		
     @Override
     protected void innerExecute() throws DPUException {
-        
-        LOG.info("DPU is running ...");
+
+        ContextUtils.sendShortInfo(ctx, "${dpu_name}.message");
         
     }
 	

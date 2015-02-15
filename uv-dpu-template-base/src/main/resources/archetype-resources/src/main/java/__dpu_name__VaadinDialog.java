@@ -34,12 +34,12 @@ public class ${dpu_name}VaadinDialog extends AbstractDialog<${dpu_name}Config_V1
 
     @Override
     public void buildDialogLayout() {
-		final VerticalLayout mainLayout = new VerticalLayout();
-		mainLayout.setWidth("100%");
-		mainLayout.setHeight("-1px");
+        final VerticalLayout mainLayout = new VerticalLayout();
+        mainLayout.setWidth("100%");
+        mainLayout.setHeight("-1px");
         mainLayout.setMargin(true);
 
-        mainLayout.addComponent(new Label("DPU's configuration"));
+        mainLayout.addComponent(new Label(ctx.tr("${dpu_name}.dialog.label")));
 
         setCompositionRoot(mainLayout);
     }
